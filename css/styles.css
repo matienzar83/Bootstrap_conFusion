@@ -37,3 +37,19 @@ body{
 .navbar-inverse {
      background-color: #512DA8;
 }
+
+
+
+
+/**/
+.form-check{
+    margin-right: 5%;
+}
+
+.form-check-label {
+    padding-left: 2.5rem;
+}
+
+div.card-body{
+        border: solid 1px #eee;
+}
