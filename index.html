@@ -3,19 +3,23 @@
 
 <head>
  <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link href="css/styles.css" rel="stylesheet">
-	 <!-- Bootstrap 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/mystyles.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">-->
-    <link href="css/bootstrap-social.css" rel="stylesheet"> 
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+		<!-- font awesome css -->
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+
+		<!-- Bootstrap social media buttons - modified by Coursera -->
+		<link rel="stylesheet" href="css/bootstrap-social.css">
+
+		<!-- Custom local CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
     <title>Ristorante Con Fusion</title>
 	
 	<!-- Font awesone 
@@ -48,13 +52,19 @@
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-8">
+                <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
+                <div class="col-12 col-sm-3 align-self-center">
+									<img src="img/logo.png" class="img-fluid">
                 </div>
+
+								<!-- Assignment #2 - Task #3 - Add block button to Jumbotron - Link to reservation card -->
+								  <div class="col col-sm-3 align align-self-center">
+                    <a href="#reservation" type="submit" class="btn btn-block btn-warning">Reserve Table</a>                    
+                </div>
+
             </div>
         </div>
     </header>
@@ -123,78 +133,73 @@
 		
 		
 	
-        <!-- Modal content-->
-		<div class="row row-content align-items-center">
-		<div class="card col-12 col-md-8">
-  <div class="card-header text-white bg-warning mb-8">Reserve table</div>
-  <div class="card-body ">
-    <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="number_of_guests" class="col-sm-2 control-label">Number of Guests</label>
-                        <div class="col-sm-8">
-                            <div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
-  </label>
-</div>
-<div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
-  </label>
-</div>
-<div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 3
-  </label>
-</div>
-<div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 4
-  </label>
-</div>
-<div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 5
-  </label>
-</div>
-<div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" > 6
-  </label>
-</div>
+<div class="container" id="reservation">
+    
+    <div class="row row-content">
+        <div class="col col-sm-8 offset-sm-2">
+            <div class="card">
+                <form>
+                <h3 class="card-header bg-warning text-white">Reserve Table</h3>
+                <div class="card-block">
+                    <form >
+                     <dl class="form-group row">
+                         <dt class="col-md-2">Number of Guest</dt>
+                         <dd class="col-md-10 form-inline">
+                            <input type="radio" class=" mr-1" id="one" name="guestNum" value="one">
+                            <label class="col-form-label mr-5" for="one" >1</label>
+                            <input type="radio" class="mr-1" id="two" name="guestNum" value="two">
+                            <label class="col-form-label mr-5" for="two">2</label>
+                            <input type="radio" class="mr-1" id="three" name="guestNum" value="three">
+                            <label class="col-form-label mr-5" for="three">3</label>
+                            <input type="radio" class="mr-1" id="four" name="guestNum" value="four">
+                            <label class="col-form-label mr-5" for="four">4</label>
+                            <input type="radio" class="mr-1" id="five" name="guestNum" value="five">
+                            <label class="col-form-label mr-5" for="five">5</label>
+                            <input type="radio" class="mr-1" id="six" name="guestNum" value="six">
+                            <label class="col-form-label mr-5" for="six">6</label>
+                         </dd>
+                         </dl> 
+                     <dl class="form-group row">
+                         <dt class="col-md-2">Date and Time</dt>
+                         <dd class="col-md-10 form-inline input-group">
+                             <div class="col row mr-3">
+                                    <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+                             <input type='text' class="form-control" /> 
+                             </div>
+                             
+                             <div class="col row">
+                                    <div class="input-group-addon"><span class="fa fa-clock-o"></span></div>
+                                    <input type="text" class="form-control" placeholder="Time" name="time" id="datetimepicker2">
+                             </div>
+                             
+                         </dd>
+                     </dl>
+                     <div class="form-group row">
+                         <div class="offset-md-2 col-md-8">
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                         </div>
                         </div>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <label for="date_and_time" class="col-sm-8 control-label">Date and Time</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputDate" placeholder="Date">
-                            <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputTime" placeholder="Time">
-                            <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-4 col-sm-10">
-                            <button type="submit" class="btn btn-primary">Reserve</button>
-                        </div>
-                    </div>
                     </form>
-  </div>
-  </div>
- </div>
-  
-	    <footer class="footer">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+    <footer class="footer">
         <div class="container">
-            <div class="row">             
-                <div class="col-5 col-sm-2">
+            <div class="row">
+                <div class="col-5 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-sm-5">
@@ -203,38 +208,49 @@
 		              121, Clear Water Bay Road<br>
 		              Clear Water Bay, Kowloon<br>
 		              HONG KONG<br>
-		             <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-		             <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-		             <i class="fa fa-envelope fa-lg"></i>: 
-                     <a href="mailto:confusion@food.net">confusion@food.net</a>
+		              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+		              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
                 <div class="col col-sm-4 align-self-center">
-                       <div style="text-align:center">
-                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
-                    </div>
+									<div style="text-align:center">
+											<a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+											<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+											<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+											<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+											<a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+											<a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+									</div>
                 </div>
            </div>
-           <div class="row justify-content-center">             
+           <div class="row justify-content-center">
                 <div class="col-auto">
                     <p>© Copyright 2015 Ristorante Con Fusion</p>
                 </div>
            </div>
         </div>
     </footer>
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/tether/dist/js/tether.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+	<!-- jQuery first, then Tether, then Bootstrap JS. -->
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/popper/dist/js/popper.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/datetimepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker2').datetimepicker({});
+        });
+    </script>
 </body>
 
 </html>
